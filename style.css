@@ -144,3 +144,40 @@ h1, h2, h3, h4, h5, h6 {
     padding: 12px 0;
   }
 }
+
+@media (max-width: 500px) {
+  .header-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    width: auto;
+  }
+
+  .header-image {
+    aspect-ratio: 9 / 16;
+    margin: 32px;
+    width: auto;
+  }
+
+  .header-image h1 {
+    width: 100%;
+    right: unset;
+    top: unset;
+    font-size: clamp(3rem, 15vw, 4rem);
+    text-align: left;
+    padding: 16px;
+  }
+
+  .about-me {
+    margin: 0;
+    padding: 0;
+    width: 90%;
+    box-shadow: unset;
+  }
+
+  .about-icons {
+    justify-content: center;
+    margin: 0;
+  }
+}
