@@ -58,10 +58,13 @@ h1, h2, h3, h4, h5, h6 {
   clip-path: polygon(0 0, 0 100%, 100% 50%, 100% 0);
 }
 
+.content {
+  width: min(90%, 1700px);
+  margin: 85px auto;
+}
+
 .header-content {
   display: flex;
-  margin: 85px auto;
-  width: min(90%, 1700px);
   align-items: center;
 }
 
@@ -99,7 +102,7 @@ h1, h2, h3, h4, h5, h6 {
   flex: 1;
 }
 
-.about-me h2 {
+h2 {
   font-size: 3rem;
 }
 
@@ -117,10 +120,58 @@ h1, h2, h3, h4, h5, h6 {
   margin-top: 12px;
 }
 
+.project-grid {
+  margin-top: 10px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 60px 40px;
+}
+
+.project-card {
+  box-shadow: 0 0 10px 1px gray;
+}
+
+.screenshot {
+  width: 100%;
+  height: 200px;
+  background-color: darkred;
+  color: white;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  font-size: 3rem;
+}
+
+.project-header {
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  margin: 10px auto;
+}
+
+.project-icons {
+  display: flex;
+  gap: 15px;
+}
+
+.project-icons img {
+  height: 24px;
+  width: auto;
+}
+
+.project-description {
+  width: 90%;
+  margin: 10px auto;
+}
+
 @media (max-width: 1000px) {
+  .content {
+    width: 80%;
+  }
+
   .header-content {
     display: block;
-    width: 80%;
     margin-top: 150px;
   }
   .header-image {
@@ -136,12 +187,20 @@ h1, h2, h3, h4, h5, h6 {
     top: 5px;
     right: -100%;
   }
-  .about-me h2 {
+  h2 {
     font-size: clamp(2.2rem, 5vw, 3rem);
+  }
+
+  .about-me h2 {
     text-align: center;
   }
+
   .about-me p {
     padding: 12px 0;
+  }
+
+  .project-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
@@ -179,5 +238,13 @@ h1, h2, h3, h4, h5, h6 {
   .about-icons {
     justify-content: center;
     margin: 0;
+  }
+
+  .main-content {
+    width: 90%;
+  }
+
+  .project-grid {
+    grid-template-columns: repeat(1, 1fr);
   }
 }
